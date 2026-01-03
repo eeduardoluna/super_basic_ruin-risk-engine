@@ -1,0 +1,31 @@
+## model limitations
+
+returns are independent, such as there are no streak, regime and correlations.
+
+payoff fixed and irrealistic
+
+probabilities are constant
+
+the risk is always a fixed fraction of the actual capital.
+
+## path dependency
+
+the order of gains and loss matters in this case.
+
+two sequences with the same amount of wins/losses can result in much different final capitals.
+
+## why positive EV does not guarantee survive.
+
+Positive expected value does not imply capital preservation.
+
+## sensivity of the parameters
+
+small variations in the risk per trade can lead to big variations in ruin probability
+
+## why we use Monte-Carlo
+
+theres no constant solution
+
+the path matter
+
+analytic fail in catch dradowns and ruins.
