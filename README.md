@@ -1,4 +1,4 @@
-# super_basic_ruin-risk-engine
+# basic_ruin-risk-engine
  simple ruin risk engine made exclusively for educationl purposes.
 
  ## 1. Goals:
