@@ -6,11 +6,15 @@
 
 ## 2. Parameters:
 2.1 seed money : R$ 100.000.
+
 2.2 amount of trades : 7.500.
+
 2.3 return model: binary and independent.
+
 2.4 probabilities 
   - Win : 45%
   - Loss : 55%
+    
 2.5 payoff 
   - Win : +2
   - Loss: -1
