@@ -1,31 +1,35 @@
-##model limitations
+## Model Limitations
 
-returns are independent, such as there are no streak, regime and correlations.
+- Returns are assumed to be independent; there are no streaks, market regimes, or correlations.
+- The payoff structure is fixed and unrealistic.
+- Probabilities are constant over time.
+- Risk is always a fixed fraction of the current capital.
 
-payoff fixed and irrealistic
+---
 
-probabilities are constant
+## Path Dependency
 
-the risk is always a fixed fraction of the actual capital.
+- The order of gains and losses matters.
+- Two sequences with the same number of wins and losses can lead to very different final capital values.
 
-##path dependency
+---
 
-the order of gains and loss matters in this case.
+## Why Positive Expected Value Does Not Guarantee Survival
 
-two sequences with the same amount of wins/losses can result in much different final capitals.
+- A positive expected value does not imply capital preservation.
+- Even profitable systems can experience ruin due to variance and drawdowns.
 
-##why positive EV does not guarantee survive.
+---
 
-Positive expected value does not imply capital preservation.
+## Parameter Sensitivity
 
-##sensivity of the parameters
+- Small variations in the risk per trade can lead to large changes in the probability of ruin.
+- The relationship between risk and ruin is highly non-linear.
 
-small variations in the risk per trade can lead to big variations in ruin probability
+---
 
-##why we use Monte-Carlo
+## Why Monte Carlo Simulation Is Used
 
-theres no constant solution
-
-the path matter
-
-analytic fail in catch dradowns and ruins.
+- There is no closed-form analytical solution for this problem.
+- The path of returns matters, not just their average.
+- Analytical approaches fail to properly capture drawdowns and ruin events.
