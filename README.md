@@ -1,57 +1,64 @@
 # basic_ruin-risk-engine
- simple ruin risk engine made exclusively for educational purposes.
 
- ## 1. Goals:
- - to calculate, using Monte-Carlo simulation, the probability of ruin, the time until ruin, the drawdown, and the final capital distribuition, using fixed parameters.
+A simple ruin risk engine built **exclusively for educational purposes**.
 
-## 2. Parameters:
-2.1 seed money : R$ 100.000.
+This project uses **Monte Carlo simulation** to estimate the probability of ruin and related risk metrics under a fixed and simplified trading model.
 
-2.2 amount of trades : 7.500.
+## Objective
 
-2.3 return model: binary and independent.
+Given a predefined stochastic model, answer the following question:
 
-2.4 probabilities 
-  - Win : 45%
-  - Loss : 55%
-    
-2.5 payoff 
-  - Win : +2
-  - Loss: -1
+> *Under these assumptions, does the system survive?*
 
-2.6 amount of money in each trade
-0,04% of the actual patrimony.
+## Model Description
 
-## 3. capital atualization law  : C(n+1) = C(n) * (1 + risk * return)
+Each simulation represents a sequence of independent trades with fixed parameters.
 
-## 4. ruin definition : the simulation is immediately when capital<=50.000
+### Parameters
 
-## 5. colected metrics per simulation:
-5.1 - ruin occurrence (yes/no)
+**Initial capital**  
+R$ 100,000
 
-5.2 - number of trades until the ruin (if it occurs)
+**Number of trades**  
+7,500
 
-5.3 - maximum drawdown
+**Return model**  
+Binary and independent
 
-5.4 - final capital (if ruin does not occurs)
+**Probabilities**  
+- Win: 45%  
+- Loss: 55%
 
+**Payoff**  
+- Win: +2  
+- Loss: −1
 
+**Risk per trade**  
+0.04% of current capital
 
- ## 6. agragated metrics :
- after N simulations
-  6.1 - probability of ruin.
-  
-  6.2 - medium drawdown and percentiles
-  
-  6.3 -  final capital distribuition
-  
-## 7. restrictions:
-7.1 - the parameters were fixed and will not change.
+**Capital update rule**  
+C(n+1) = C(n) · (1 + r · R(n))
 
-7.2 - no extra model will be introducted.
+where `r` is the fixed risk fraction and `R(n)` is the trade return.
 
-7.3 - no premature otimization.
+**Ruin condition**  
+The simulation stops immediately if capital ≤ R$ 50,000.
 
-## 8. final observation
-this engine answer the following question:
-"giving this assumed model, the system survive?"
+## Metrics Collected per Simulation
+
+- Ruin occurrence (yes / no)  
+- Number of trades until ruin (if it occurs)  
+- Maximum drawdown  
+- Final capital (if ruin does not occur)
+
+## Aggregated Metrics (after N simulations)
+
+- Probability of ruin  
+- Average drawdown and drawdown percentiles  
+- Final capital distribution
+
+## Restrictions
+
+- All parameters are fixed and do not change.  
+- No additional models or regime dynamics are introduced.  
+- No premature optimization.
