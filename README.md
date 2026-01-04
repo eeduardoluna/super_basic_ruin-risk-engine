@@ -1,4 +1,4 @@
-# basic_ruin-risk-engine
+# basic_ruin-risk-engine.cpp
 
 A simple ruin risk engine built **exclusively for educational purposes**.
 
