@@ -1,5 +1,5 @@
 # basic_ruin-risk-engine
- simple ruin risk engine made exclusively for educationl purposes.
+ simple ruin risk engine made exclusively for educational purposes.
 
  ## 1. Goals:
  - to calculate, using Monte-Carlo simulation, the probability of ruin, the time until ruin, the drawdown, and the final capital distribuition, using fixed parameters.
